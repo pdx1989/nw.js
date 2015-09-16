@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>rc2-window-open-size</title>
+</head>
+<body>
+  <p>test</p>
+  <script>
+    win = window.open('about:blank','newwindow','height=100, width=400');
+    setTimeout(function(){
+	    if (win.innerHeight == 100 && win.innerWidth == 400)
+	    	process.exit(0);
+    },500)
+  </script>
+</body>
+
+</html>
+

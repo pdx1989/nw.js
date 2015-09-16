@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>rc5-utf8-encoding-crash</title>
+</head>
+<body>
+  <p>test</p>
+
+<script>
+	var fs = require('fs');
+	var stream = fs.createReadStream('libVibration.so', {encoding: 'utf8'});
+	stream.on('data', function(chunk){
+	});	
+	stream.on('end', function(chunk){
+	  process.exit(0);
+	});
+</script>
+
+</body>
+
+</html>
+

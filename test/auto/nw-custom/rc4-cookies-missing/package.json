@@ -1,0 +1,8 @@
+{
+  "name":"rc4-cookies-missing",
+  "dependencies":{
+  	"websocket.io":"0.2.1"
+  },  
+  "main":"index.html"
+}
+

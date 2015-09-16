@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>rc1-uncaught-exception</title>
+</head>
+<body>
+  <p>test</p>
+  <script>
+    process.on('uncaughtException', function(err) {
+      var item = document.getElementById("success");
+      item.parentNode.removeChild(item);
+    });
+  	var div = document.createElement('div');
+  	div.setAttribute("id","success");
+  	document.body.appendChild(div);
+    throw new Error('browserException');
+  </script>
+</body>
+
+</html>
+
