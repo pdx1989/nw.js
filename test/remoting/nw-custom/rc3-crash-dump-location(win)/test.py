@@ -1,6 +1,6 @@
 import time
 import os
-import platform
+import utils
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -18,7 +18,7 @@ try:
 finally:
 	driver.quit()
 	del os.environ["BREAKPAD_DUMP_LOCATION"]
-	if platform.system() == 'win32':
+	if utils.IsWindows():
 		os.popen("rd/s/q \"" + os.path.dirname(os.path.abspath(__file__)) + "/crash\"")
 	else:
 		os.popen("rm -rf \"" + os.path.dirname(os.path.abspath(__file__)) + "/crash\"")
