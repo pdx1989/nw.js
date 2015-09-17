@@ -8,8 +8,11 @@ chrome_options.add_argument("app-path=" + os.path.dirname(os.path.abspath(__file
 
 driver = webdriver.Chrome(executable_path=os.environ['CHROMEDRIVER'], chrome_options=chrome_options)
 try:
-    time.sleep(5)
-    assert(driver.current_url == "file://" + os.path.dirname(os.path.abspath(__file__)) + "/index.html")
+	time.sleep(5)
+	cpath = os.path.dirname(os.path.abspath(__file__)).replace('\\','/')
+	if not cpath[0] == '/':
+		cpath = '/' + cpath
+	assert(driver.current_url == "file://" + cpath + "/index.html")
 
 finally:
     driver.quit()
