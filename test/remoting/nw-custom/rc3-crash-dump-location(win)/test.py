@@ -10,6 +10,11 @@ chrome_options = Options()
 chrome_options.add_argument("app-path=" + os.path.dirname(os.path.abspath(__file__)))
 os.environ["BREAKPAD_DUMP_LOCATION"] = os.path.dirname(os.path.abspath(__file__)) + "/crash"
 
+if utils.IsWindows():
+	os.popen("rd/s/q \"" + os.path.dirname(os.path.abspath(__file__)) + "/crash\"")
+else:
+	os.popen("rm -rf \"" + os.path.dirname(os.path.abspath(__file__)) + "/crash\"")
+
 driver = webdriver.Chrome(executable_path=os.environ['CHROMEDRIVER'], chrome_options=chrome_options)
 try:
 	time.sleep(5)

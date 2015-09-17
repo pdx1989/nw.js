@@ -1,5 +1,8 @@
 import time
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/../../../")
+import utils
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -10,7 +13,8 @@ driver = webdriver.Chrome(executable_path=os.environ['CHROMEDRIVER'], chrome_opt
 try:
 	time.sleep(5)
 	cpath = os.path.dirname(os.path.abspath(__file__)).replace('\\','/')
-	if not cpath[0] == '/':
+	if utils.IsWindows():
+		cpath = cpath[0].upper() + cpath[1:]
 		cpath = '/' + cpath
 	assert(driver.current_url == "file://" + cpath + "/index.html")
 
