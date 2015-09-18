@@ -5,16 +5,16 @@
   <title>rc5-middle-mouse-button</title>
   <script>
     window.onload = function () {
-		var gui = require('nw.gui'),
-		        win = gui.Window.get();
-		    win.on('new-win-policy', function (frame, url, policy) {
-		      policy.forceCurrent();
-		    });
-		var ifabc = document.getElementById("abc");
-	    ifabc.onload = function() {
-	        process.exit(0);
-	    }
-	}
+      var gui = require('nw.gui'),
+          win = gui.Window.get();
+      win.on('new-win-policy', function (frame, url, policy) {
+        policy.forceCurrent();
+      });
+      var ifabc = document.getElementById("abc");
+      ifabc.onload = function() {
+        process.exit(0);
+      }
+    }
   </script>
 </head>
 <body>

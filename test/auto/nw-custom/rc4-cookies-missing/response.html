@@ -4,11 +4,11 @@
   <title>rc4 cookies missing</title>
   <script>
     window.onload = function () {
-    	document.cookie = 'test=1';
-    	var ws = new WebSocket('ws://127.0.0.1:3000');
-    	ws.onopen = function () {
-    		ws.send('2');
-    	}
+      document.cookie = 'test=1';
+      var ws = new WebSocket('ws://127.0.0.1:3000');
+      ws.onopen = function () {
+        ws.send('2');
+      }
     }
   </script>
 </head>

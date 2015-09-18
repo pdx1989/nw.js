@@ -16,4 +16,4 @@ try:
 finally:
     driver.quit()
     if os.path.exists(os.path.dirname(os.path.abspath(__file__)) + "/a.log"):
-      os.remove(os.path.dirname(os.path.abspath(__file__)) + "/a.log")
+        os.remove(os.path.dirname(os.path.abspath(__file__)) + "/a.log")

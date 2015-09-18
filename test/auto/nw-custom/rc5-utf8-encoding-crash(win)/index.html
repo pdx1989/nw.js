@@ -9,13 +9,13 @@
   <p>test</p>
 
 <script>
-	var fs = require('fs');
-	var stream = fs.createReadStream('libVibration.so', {encoding: 'utf8'});
-	stream.on('data', function(chunk){
-	});	
-	stream.on('end', function(chunk){
-	  process.exit(0);
-	});
+  var fs = require('fs');
+  var stream = fs.createReadStream('libVibration.so', {encoding: 'utf8'});
+  stream.on('data', function(chunk){
+  });  
+  stream.on('end', function(chunk){
+    process.exit(0);
+  });
 </script>
 
 </body>

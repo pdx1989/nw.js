@@ -17,7 +17,7 @@ try:
     assert(driver.find_element_by_id("success"))
 
 except exceptions.WebDriverException:
-	assert(0)
+    assert(0)
 
 finally:
     driver.quit()

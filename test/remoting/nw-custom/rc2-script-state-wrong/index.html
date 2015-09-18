@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <title>rc2-script-state-wrong</title>
   <script>
-  	window.onload = function() {
-		var iframe = document.getElementById("abc");
-		iframe.src = './response.html';
-		iframe.onload = function() {
-		  var btn = iframe.contentWindow.document.getElementById("btn");
-		  btn.addEventListener("click",function(evt){
-		  	if (evt instanceof iframe.contentWindow.Event){
-		  		var div = document.createElement('div');
-		  		div.setAttribute("id","success");
-		  		document.body.appendChild(div);
-		  	}
-		  });
-		};
-	};
+    window.onload = function() {
+      var iframe = document.getElementById("abc");
+      iframe.src = './response.html';
+      iframe.onload = function() {
+        var btn = iframe.contentWindow.document.getElementById("btn");
+        btn.addEventListener("click",function(evt){
+          if (evt instanceof iframe.contentWindow.Event){
+            var div = document.createElement('div');
+            div.setAttribute("id","success");
+            document.body.appendChild(div);
+          }
+        });
+      }
+    }
   </script>
 </head>
 <body>

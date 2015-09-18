@@ -19,6 +19,6 @@ finally:
     driver.quit()
     del os.environ["NWJS_LOG_FILE"]
     if os.path.exists(os.path.dirname(os.path.abspath(__file__)) + "/a.log"):
-      os.remove(os.path.dirname(os.path.abspath(__file__)) + "/a.log")
+        os.remove(os.path.dirname(os.path.abspath(__file__)) + "/a.log")
     if os.path.exists(os.path.dirname(os.path.abspath(__file__)) + "/b.log"):
-      os.remove(os.path.dirname(os.path.abspath(__file__)) + "/b.log")
+        os.remove(os.path.dirname(os.path.abspath(__file__)) + "/b.log")

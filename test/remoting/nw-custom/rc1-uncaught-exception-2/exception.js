@@ -1,3 +1,3 @@
 exports.throwerror = function () {
-	throw new Error('nodeException');
+  throw new Error('nodeException');
 }
