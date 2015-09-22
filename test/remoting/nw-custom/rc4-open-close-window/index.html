@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>rc4-open-close-window</title>
+</head>
+<body>
+  <button id="open" onclick="openIt()">Open Window</button>
+  <button id="close" onclick="closeIt()">Close Window</button>
+  <script>
+    var win;
+    function openIt() {
+      win = window.open('http://www.baidu.com/');
+    }
+    function closeIt() {
+      win.close();
+    }
+  </script>
+</body>
+</html>

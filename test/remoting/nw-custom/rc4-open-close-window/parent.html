@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>parent</title>
+</head>
+<body>
+  <script>
+    require('http').createServer(function(req, res) {
+      res.writeHead('Content-Type', 'text/html');
+      require('fs').createReadStream('index.html').pipe(res);
+    }).listen(8000);
+  </script>
+  <iframe id="abc" src="http://localhost:8000/index.html"></iframe>
+</body>
+</html>
