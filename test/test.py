@@ -754,7 +754,7 @@ class Context(object):
       return os.path.join(nwdir, "nw")
     if utils.IsWindows():
       return os.path.join(nwdir, "nw.exe")
-    return os.path.join(nwdir, "nwjs.app/Contents/MacOS/nwjs")
+    return os.path.join(nwdir, "node-webkit.app/Contents/MacOS/node-webkit")
 
   def GetVmFlags(self, testcase, mode):
     return testcase.variant_flags + FLAGS[mode]
